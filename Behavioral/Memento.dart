@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'dart:async';
 
 class Originator {
   // For the sake of simplicity, the originator's state is stored inside a

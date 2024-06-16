@@ -1,12 +1,37 @@
 import 'dart:io';
 import 'Behavioral/ChainOfResponsabilities.dart' as ChainOfResponsabilities;
+import 'Behavioral/Command.dart' as Command;
+import 'Behavioral/Interpreter.dart' as Interpreter;
+import 'Behavioral/Iterator.dart' as Iterator;
+import 'Behavioral/Mediator.dart' as Mediator;
+import 'Behavioral/Memento.dart' as Memento;
+import 'Behavioral/Observer.dart' as Observer;
+import 'Behavioral/State.dart' as State;
+import 'Behavioral/Strategy.dart' as Strategy;
+import 'Behavioral/TemplateMethod.dart' as TemplateMethod;
+import 'Behavioral/Visitor.dart' as Visitor;
 import 'Creational/AbstractFactory.dart' as AbstractFactory;
+import 'Creational/Builder.dart' as Builder;
+import 'Creational/FactoryMethod.dart' as FactoryMethod;
+import 'Creational/Prototype.dart' as Prototype;
+import 'Creational/SingletonNonThreadSafe.dart' as SingletonNonThreadSafe;
+import 'Creational/SingletonThreadSafe.dart' as SingletonThreadSafe;
 import 'Other/Architectural/MVC.dart' as MVC;
+//import 'Other/Architectural/Microservices.dart' as Microservices;
 // import 'Other/Architectural/MVVM.dart' as MVVM;
 import 'Other/Architectural/ServiceOrientedArchitecture.dart' as SOA;
 import 'Other/Concurrency/ProducerConsumer.dart' as ProducerConsumer;
+import 'Other/Concurrency/ReadWriteLock.dart' as ReadWriteLock;
+import 'Other/Concurrency/ThreadPool.dart' as ThreadPool;
 import 'Other/Domain/Repository.dart' as Repository;
+import 'Other/Domain/UnitOfWork.dart' as UnitOfWork;
 import 'Structural/Adapter.dart' as Adapter;
+import 'Structural/Bridge.dart' as Bridge;
+import 'Structural/Composite.dart' as Composite;
+import 'Structural/Decorator.dart' as Decorator;
+import 'Structural/Facade.dart' as Facade;
+import 'Structural/Flyweight.dart' as Flyweight;
+import 'Structural/Proxy.dart' as Proxy;
 
 main() {
   print("Ingrese su tipo de patrón.\n1. Estructural.\n2. Creacional.\n3. Comportamiento");
@@ -51,22 +76,22 @@ mostrarMenuEstructural() {
         Adapter.main();
         break;
       case 2:
-        StructuralBridgeProgram().main();
+        Bridge.main();
         break;
       case 3:
-        StructuralCompositeProgram().main();
+        Composite.main();
         break;
       case 4:
-        StructuralDecoratorProgram().main();
+        Decorator.main();
         break;
       case 5:
-        StructuralFacadeProgram().main();
+        Facade.main();
         break;
       case 6:
-        StructuralFlyweightProgram().main();
+        Flyweight.main();
         break;
       case 7:
-        StructuralProxyProgram().main();
+        Proxy.main();
         break;
       default:
         print("Opción no válida.");
@@ -90,19 +115,19 @@ void mostrarMenuCreacional() {
         AbstractFactory.main();
         break;
       case 2:
-        CreationalBuilderProgram().main();
+        Builder.main();
         break;
       case 3:
-        CreationalFactoryMethodProgram().main();
+        FactoryMethod.main();
         break;
       case 4:
-        CreationalPrototypeProgram().main();
+        Prototype.main();
         break;
       case 5:
-        CreationalSingletonNonThreadSafeProgram().main();
+        SingletonNonThreadSafe.main();
         break;
       case 6:
-        CreationalSingletonThreadSafeProgram().main();
+        SingletonThreadSafe.main();
         break;
       default:
         print("Opción no válida.");
@@ -126,34 +151,34 @@ void mostrarMenuComportamiento() {
       ChainOfResponsabilities.main();
         break;
       case 2:
-        BehavioralCommandProgram().main();
+        Command.main();
         break;
       case 3:
-        BehavioralInterpreterProgram().main();
+        Interpreter.main();
         break;
       case 4:
-        BehavioralIteratorProgram().main();
+        Iterator.main();
         break;
       case 5:
-        BehavioralMediatorProgram().main();
+        Mediator.main();
         break;
       case 6:
-        BehavioralMementoProgram().main();
+        Memento.main();
         break;
       case 7:
-        BehavioralObserverProgram().main();
+        Observer.main();
         break;
       case 8:
-        BehavioralStateProgram().main();
+        State.main();
         break;
       case 9:
-        BehavioralStrategyProgram().main();
+        Strategy.main();
         break;
       case 10:
-        BehavioralTemplateMethodProgram().main();
+        TemplateMethod.main();
         break;
       case 11:
-        BehavioralVisitorProgram().main();
+        Visitor.main();
         break;
       default:
         print("Opción no válida.");
@@ -187,10 +212,10 @@ void masPatrones() {
         ProducerConsumer.main();
         break;
       case 2:
-        OtherConcurrencyReadWriteLockProgram().main();
+        ReadWriteLock.main();
         break;
       case 3:
-        OtherConcurrencyThreadPoolProgram().main();
+        ThreadPool.main();
         break;
       case 4:
         MVC.main();
@@ -208,7 +233,7 @@ void masPatrones() {
         Repository.main();
         break;
       case 9:
-        OtherDomainUnitOfWorkProgram().main();
+        UnitOfWork.main();
         break;
       case 10:
         // Domain Model - Es solo muestra.

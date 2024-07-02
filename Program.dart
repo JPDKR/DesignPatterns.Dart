@@ -16,15 +16,15 @@ import 'Creational/FactoryMethod.dart' as FactoryMethod;
 import 'Creational/Prototype.dart' as Prototype;
 import 'Creational/SingletonNonThreadSafe.dart' as SingletonNonThreadSafe;
 import 'Creational/SingletonThreadSafe.dart' as SingletonThreadSafe;
-import 'Other/Architectural/MVC.dart' as MVC;
+import 'Architectural/MVC.dart' as MVC;
 //import 'Other/Architectural/Microservices.dart' as Microservices;
 // import 'Other/Architectural/MVVM.dart' as MVVM;
-import 'Other/Architectural/ServiceOrientedArchitecture.dart' as SOA;
-import 'Other/Concurrency/ProducerConsumer.dart' as ProducerConsumer;
-import 'Other/Concurrency/ReadWriteLock.dart' as ReadWriteLock;
-import 'Other/Concurrency/ThreadPool.dart' as ThreadPool;
-import 'Other/Domain/Repository.dart' as Repository;
-import 'Other/Domain/UnitOfWork.dart' as UnitOfWork;
+import 'Architectural/ServiceOrientedArchitecture.dart' as SOA;
+import 'Concurrency/ProducerConsumer.dart' as ProducerConsumer;
+import 'Concurrency/ReadWriteLock.dart' as ReadWriteLock;
+import 'Concurrency/ThreadPool.dart' as ThreadPool;
+import 'Domain/Repository.dart' as Repository;
+import 'Domain/UnitOfWork.dart' as UnitOfWork;
 import 'Structural/Adapter.dart' as Adapter;
 import 'Structural/Bridge.dart' as Bridge;
 import 'Structural/Composite.dart' as Composite;
@@ -32,9 +32,14 @@ import 'Structural/Decorator.dart' as Decorator;
 import 'Structural/Facade.dart' as Facade;
 import 'Structural/Flyweight.dart' as Flyweight;
 import 'Structural/Proxy.dart' as Proxy;
+// import 'Monads/Result.dart' as Result;
+// import 'Monads/MaybeOption.dart' as MaybeOption;
+// import 'Monads/Either.dart' as Either;
+// import 'Monads/Try.dart' as Try;
 
 main() {
-  print("Ingrese su tipo de patrón.\n1. Estructural.\n2. Creacional.\n3. Comportamiento");
+  print(
+      "Ingrese su tipo de patrón.\n1. Estructural.\n2. Creacional.\n3. Comportamiento.\n4. Otros");
 
   int? opcion = int.tryParse(stdin.readLineSync() ?? '');
 
@@ -51,7 +56,7 @@ main() {
       case 3:
         mostrarMenuComportamiento();
         break;
-      case 66:
+      case 4:
         masPatrones();
         break;
       default:
@@ -64,7 +69,8 @@ main() {
 mostrarMenuEstructural() {
   print("Eligió Patrones Estructurales.");
   print("Seleccione su patrón");
-  print("1. Adapter.\n2. Bridge.\n3. Composite.\n4. Decorator.\n5. Facade.\n6. Flyweight.\n7. Proxy");
+  print(
+      "1. Adapter.\n2. Bridge.\n3. Composite.\n4. Decorator.\n5. Facade.\n6. Flyweight.\n7. Proxy");
 
   int? opcion = int.tryParse(stdin.readLineSync() ?? '');
 
@@ -103,7 +109,8 @@ mostrarMenuEstructural() {
 void mostrarMenuCreacional() {
   print("Eligió Patrones Creacionales.");
   print("Seleccione su patrón");
-  print("1. Abstract Factory.\n2. Builder.\n3. Factory Method.\n4. Prototype.\n5. Singleton (Non-Thread Safe).\n6. Singleton (Thread Safe)");
+  print(
+      "1. Abstract Factory.\n2. Builder.\n3. Factory Method.\n4. Prototype.\n5. Singleton (Non-Thread Safe).\n6. Singleton (Thread Safe)");
 
   int? opcion = int.tryParse(stdin.readLineSync() ?? '');
 
@@ -139,7 +146,8 @@ void mostrarMenuCreacional() {
 void mostrarMenuComportamiento() {
   print("Eligió Patrones de Comportamiento.");
   print("Seleccione su patrón");
-  print("1. Chain Of Responsibility.\n2. Command.\n3. Interpreter.\n4. Iterator.\n5. Mediator.\n6. Memento.\n7. Observer.\n8. State.\n9. Strategy.\n10. Template Method.\n11. Visitor.");
+  print(
+      "1. Chain Of Responsibility.\n2. Command.\n3. Interpreter.\n4. Iterator.\n5. Mediator.\n6. Memento.\n7. Observer.\n8. State.\n9. Strategy.\n10. Template Method.\n11. Visitor.");
 
   int? opcion = int.tryParse(stdin.readLineSync() ?? '');
 
@@ -148,7 +156,7 @@ void mostrarMenuComportamiento() {
 
     switch (opcion) {
       case 1:
-      ChainOfResponsabilities.main();
+        ChainOfResponsabilities.main();
         break;
       case 2:
         Command.main();
@@ -200,7 +208,12 @@ void masPatrones() {
       "Patrones Específicos de Dominios:\n\n"
       "8. Repository\n"
       "9. Unit of Work\n"
-      "10. Domain Model");
+      "10. Domain Model\n\n"
+      "Monads:\n\n"
+      "11. Result"
+      "12. Try"
+      "13. Maybe/Option"
+      "14. Either");
 
   int? opcion = int.tryParse(stdin.readLineSync() ?? '');
 
@@ -221,7 +234,7 @@ void masPatrones() {
         MVC.main();
         break;
       case 5:
-        // MVVM - Solo en WPF.
+        // MVVM - Solo en Flutter.
         break;
       case 6:
         // Microservicios - Solo con AspNet
@@ -238,6 +251,15 @@ void masPatrones() {
       case 10:
         // Domain Model - Es solo muestra.
         break;
+      case 11:
+        // Implementación de Result.
+        break;
+      case 12:
+        // Implementación de Try.
+      case 13:
+        // Implementación de Maybe/Option.
+      case 14:
+        // Implementación de Either.
       default:
         print("Opción no válida.");
         break;

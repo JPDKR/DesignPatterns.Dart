@@ -210,9 +210,9 @@ void masPatrones() {
       "9. Unit of Work\n"
       "10. Domain Model\n\n"
       "Monads:\n\n"
-      "11. Result"
-      "12. Try"
-      "13. Maybe/Option"
+      "11. Result\n"
+      "12. Try\n"
+      "13. Maybe/Option\n"
       "14. Either");
 
   int? opcion = int.tryParse(stdin.readLineSync() ?? '');

@@ -43,3 +43,8 @@ All of 23 Design Patterns ready to be tested. Every pattern has a step-by-step t
 * Domain Model
 * Repository
 * Unit of Work
+# Monads
+* Result
+* Maybe/Option
+* Either
+* Try

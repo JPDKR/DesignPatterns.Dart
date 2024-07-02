@@ -37,7 +37,7 @@ All of 23 Design Patterns ready to be tested. Every pattern has a step-by-step t
 * Service-Oriented Arquitecture (SOA)
 # Concurrency
 * Producer-Consumer
-+ Read Write Lock
+* Read Write Lock
 * Thread Pool
 # Domain
 * Domain Model
